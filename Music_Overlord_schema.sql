@@ -3,9 +3,9 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+-- SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+-- SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+-- SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
 -- Schema music_overlord
@@ -114,9 +114,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- ---------------------------------
 -- INSERTING ARTISTS TO TABLE ARTIST --
 -- --------------------------------- --
-USE `music_overlord`;
-
-DELETE FROM artist;
 
 -- INSERT INTO Artist (ArtistID, ArtistName, Genre, CreationDate, Country) VALUES
 -- (1, 'Adele', 'Pop', '2020-03-15', 'United Kingdom'),
@@ -174,7 +171,6 @@ DELETE FROM artist;
 -- ----------------------------------------------
 -- INSERT INTO RECORD TABLE
 -- --------------------------------------------
-DELETE FROM record;
 
 -- INSERT INTO Record (RecordID, Title, Date_Released, Genre, Rated, ArtistID) VALUES
 -- (1, 'Melodías del Alma', '2021-03-10', 'Pop', 'PG', 3),
@@ -231,10 +227,6 @@ DELETE FROM record;
 -- -------------------------------------------------
 -- INSTERTING INTO SONGS TABLE
 -- -------------------------------------------------
-
-ALTER TABLE Songs
-CHANGE Lenght Length VARCHAR(150);
-
 
 -- INSERT INTO Songs (SongID, Title, Length, RecordID, ArtistID) VALUES
 -- (1, 'Blue Sky', '4:20', 1, 7),
@@ -391,7 +383,6 @@ CHANGE Lenght Length VARCHAR(150);
 -- -------------------------------------------------
 -- INSTERTING INTO 'Users' TABLE
 -- -------------------------------------------------
-DELETE FROM users;
 
 -- INSERT INTO Users (UserID, UserName, `E-Mail`, RegistrationDate) VALUES
 -- (1, 'john_doe', 'john.doe@example.com', '2020-01-15'),
